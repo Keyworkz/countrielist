@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-// import countryCard from "../../views/countryCard/countryCard";
+
+import countryCard from "../../views/countryCard/countryCard";
 
 class CountryList extends Component {
   render() {
@@ -8,7 +9,7 @@ class CountryList extends Component {
         {countryCard({
           imgSrc: "https://picsum.photos/200/300",
           name: "Country",
-          population: 250,
+          population: 500,
           buttonText: "Details",
           callback: null,
         })}

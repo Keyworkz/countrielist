@@ -1,21 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 
-import countryCard from "../../views/countryCard/countryCard";
+import "./countryCard.css";
 
-class Countries extends Component {
-  render() {
-    return (
-      <section className="countries">
-        {countryCard({
-          imgSrc: "https://picsum.photos/200/300",
-          name: "Country",
-          population: 250,
-          buttonText: "Details",
-          callback: null,
-        })}
-      </section>
-    );
-  }
+function countryCard(props) {
+  return (
+    <div className="country-card">
+      <img src={props.imgSrc} alt="country-flag"></img>
+      <h4>{props.name}</h4>
+      <p>{props.population}</p>
+
+      <button className="button button-primary" onClick={props.callback}>
+        {props.buttonText}
+      </button>
+    </div>
+  );
 }
 
 export default countryCard;
